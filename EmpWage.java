@@ -11,14 +11,17 @@ class EmpWage{
 
 		int check = (int)(Math.random()*2)+1;
 		
-		if(check == 1){
-			workHour = 8;
-		}
-		else if(check == 2){
-			workHour = 4;
-		}
-		else{
-			workHour = 0;
+		switch(check){
+
+			case isFullTime:
+				workHour = 8;
+				break;
+			case isPartTime:
+				workHour = 4;
+				break;
+			default:
+				workHour = 0;
+				break;
 		}
 		empWage = workHour * empRatePerHour;
 		System.out.println("Emp wage: "+empWage);
